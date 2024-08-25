@@ -21,4 +21,5 @@ jobs:
       working-directory: ./src
       run: npm clean-install
     - name: Run linter
+      working-directory: ./src
       run: npm run test-lint
