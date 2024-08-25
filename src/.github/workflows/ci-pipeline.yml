@@ -3,9 +3,11 @@ name: Assignment One CI Pipeline
     push:
     branches:
     - main
+    - lintTesting
    pull_request:
     branches:
     - main
+    - lintTesting
 jobs:
   lint:
     runs-on: ubuntu-latest
