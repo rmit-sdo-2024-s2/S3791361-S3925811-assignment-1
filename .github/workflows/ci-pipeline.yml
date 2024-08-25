@@ -20,9 +20,6 @@ jobs:
     - name: Install dependencies
       working-directory: ./src
       run: npm clean-install
-    - name: npm run start
-      working-directory: ./src
-      run: start
     - name: Run linter
       working-directory: ./src
       run: npm run test-lint
