@@ -23,3 +23,6 @@ jobs:
     - name: Run linter
       working-directory: ./src
       run: npm run test-lint
+    - name: run unit test
+      working-directory: ./src
+      run: npm run test-unit
