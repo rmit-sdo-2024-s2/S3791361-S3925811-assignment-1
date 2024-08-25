@@ -20,4 +20,4 @@ jobs:
     - name: Install dependencies
       run: npm clean-install
     - name: Run linter
-      run: npm run lint
+      run: npm run test-lint
