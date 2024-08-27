@@ -37,7 +37,7 @@ jobs:
     - name: run unit test
       run: npm run test-unit --prefix src
   intergration-testing:
-    needs: unit-test
+    needs: unit-tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
