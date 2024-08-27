@@ -48,10 +48,10 @@ jobs:
       working-directory: ./src
       run: npm clean-install
     - if: success() || failure()
-        uses: actions/upload-artifact@v3
-          with:
-            name: unit-test-${{ github.sha }}
-            path: reports/report.xml
+      uses: actions/upload-artifact@v3
+        with:
+          name: unit-test-${{ github.sha }}
+          path: reports/report.xml
     
     
     
