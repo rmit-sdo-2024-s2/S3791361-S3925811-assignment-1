@@ -39,4 +39,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: unit-test-${{ github.sha }}
+        working-directory: ./src
         path: reports/report.xml
