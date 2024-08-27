@@ -4,6 +4,7 @@ const app = express();
 const Note = require('./models/note');
 const notesRouter = require('./routes/notes');
 const methodOverride = require('method-override');
+const SERVER = 'mongodb://localhost:27017';
 require('dotenv').config();
 
 app.set('view engine', 'ejs');
