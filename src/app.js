@@ -4,7 +4,6 @@ const app = express();
 const Note = require('./models/note');
 const notesRouter = require('./routes/notes');
 const methodOverride = require('method-override');
-const SERVER = 'mongodb://localhost:27017';
 require('dotenv').config();
 
 app.set('view engine', 'ejs');
@@ -17,7 +16,8 @@ app.get('/', async (req, res) => {
   res.render('index', { notes: notes });
 });
 
-mongoose.connect(process.env.SERVER, {
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017'
+mongoose.connect(dbURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
