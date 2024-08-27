@@ -23,7 +23,7 @@ mongoose.connect(dbURI, {
 });
 
 app.use('/', notesRouter);
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 27017, () => {
   console.log(`Server Has Started`);
 });
 
