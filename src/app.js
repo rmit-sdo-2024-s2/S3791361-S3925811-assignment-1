@@ -16,14 +16,13 @@ app.get('/', async (req, res) => {
   res.render('index', { notes: notes });
 });
 
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'
-mongoose.connect(dbURI, {
+mongoose.connect(process.env.SERVER, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
 app.use('/', notesRouter);
-app.listen(process.env.PORT || 27017, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server Has Started`);
 });
 
