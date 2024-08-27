@@ -20,6 +20,12 @@ jobs:
       run: npm clean-install
     - name: Run linter
       run: npm run test-lint --prefix src
+      - if: github.ref == 'refs/heads/feature/artefacts'
+      uses: actions/upload-artifact@v3
+      with:
+        name: unit-test-${{ github.sha }}
+        path: reports/report.xml
+        
   unit-tests:
     needs: lint
     runs-on: ubuntu-latest
@@ -34,9 +40,15 @@ jobs:
       run: npm clean-install
     - name: run unit test
       run: npm run test-unit --prefix src
+      - if: github.ref == 'refs/heads/feature/artefacts'
+      uses: actions/upload-artifact@v3
+      with:
+        name: unit-test-${{ github.sha }}
+        path: reports/report.xml
 
   artifacts:
     runs-on: ubuntu-latest
+    if: false
     if: github.ref == 'refs/heads/feature/artefacts'
     steps:
     - uses: actions/checkout@v3
@@ -47,7 +59,7 @@ jobs:
     - name: Install dependencies
       working-directory: ./src
       run: npm clean-install
-    - if: success() || failure()
+    - if: github.ref == 'refs/heads/feature/artefacts'
       uses: actions/upload-artifact@v3
       with:
         name: unit-test-${{ github.sha }}
