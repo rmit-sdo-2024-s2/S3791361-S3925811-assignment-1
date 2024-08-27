@@ -13,11 +13,12 @@ describe('mockingoose', () => {
         it('Validate Model', async () => {
             const todo = new Note({
                 title: "Task Note",
-                description: "" // "This can't be blank"
+                description: "description" // "This can't be blank"
             });
 
             const result = await todo.validateSync();
             expect(result).toBe(undefined);
         });
     })
+})
 })
