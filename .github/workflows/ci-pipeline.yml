@@ -40,25 +40,3 @@ jobs:
       with:
         name: unit-test-${{ github.sha }}
         path: reports/report.xml
-
-  artifacts:
-    runs-on: ubuntu-latest
-    if: false
-    if: github.ref == 'refs/heads/feature/artefacts'
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 18.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: "18"
-    - name: Install dependencies
-      working-directory: ./src
-      run: npm clean-install
-    - if: github.ref == 'refs/heads/feature/artefacts'
-      uses: actions/upload-artifact@v3
-      with:
-        name: unit-test-${{ github.sha }}
-        path: reports/report.xml
-    
-    
-    
