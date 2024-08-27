@@ -22,7 +22,31 @@ jobs:
       run: npm clean-install
     - name: Run linter
       run: npm run test-lint --prefix src
+  unit-tests:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18"
+    - name: Install dependencies
+      working-directory: ./src
+      run: npm clean-install
     - name: run unit test
       run: npm run test-unit --prefix src
+  intergration-testing:
+    needs: unit-test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18"
+    - name: Install dependencies
+      working-directory: ./src
+      run: npm clean-install
     - name: Intergration Testing
       run: npm run test-integration --prefix src
