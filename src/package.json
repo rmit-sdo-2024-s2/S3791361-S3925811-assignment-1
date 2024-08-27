@@ -7,7 +7,6 @@
     "start": "node app.js",
     "test-lint": "eslint .",
     "test-unit": "jest --ci tests/unit --coverage --forceExit",
-	"test-coverage": "jest --ci scr/ --coverage --forceExit",
     "test-integration": "jest --ci tests/integration --coverage --forceExit",
     "test-e2e": "npx playwright test"
   },

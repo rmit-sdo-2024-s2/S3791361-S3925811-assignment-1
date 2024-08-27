@@ -36,5 +36,3 @@ jobs:
       run: npm clean-install
     - name: run unit test
       run: npm run test-unit --prefix src
-    - name: tune coverage
-      run: npm run test-coverage
