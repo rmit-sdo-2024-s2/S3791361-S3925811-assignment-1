@@ -21,8 +21,8 @@ jobs:
       working-directory: ./src
       run: npm clean-install
     - name: Run linter
-      working-directory: ./src
-      run: npm run test-lint
+      run: npm run test-lint --prefix src
     - name: run unit test
-      working-directory: ./src
-      run: npm run test-unit
+      run: npm run test-unit --prefix src
+    - name: Intergration Testing
+      run: npm run test-integration --prefix src
