@@ -49,9 +49,9 @@ jobs:
       run: npm clean-install
     - if: success() || failure()
       uses: actions/upload-artifact@v3
-        with:
-          name: unit-test-${{ github.sha }}
-          path: reports/report.xml
+      with:
+        name: unit-test-${{ github.sha }}
+        path: reports/report.xml
     
     
     
