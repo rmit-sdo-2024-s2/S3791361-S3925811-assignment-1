@@ -35,7 +35,7 @@ jobs:
       run: npm clean-install
     - name: run unit test
       run: npm run test-unit --prefix src
-      - if: github.ref == 'refs/heads/feature/artefacts'
+    - if: github.ref == 'refs/heads/feature/artefacts'
       uses: actions/upload-artifact@v3
       with:
         name: unit-test-${{ github.sha }}
