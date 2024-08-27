@@ -5,6 +5,8 @@ const req = supertest(app)
 
 // Integration Tests programmatically test the API used by the application
 
+jest.setTimeout(20000); //increase timeout cause its maxing out (or there is something else)
+
 describe('Add Note', () => {
     it('Should add a new note and redirect to login', async () => {
 

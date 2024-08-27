@@ -20,8 +20,7 @@ const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-})
-.then(() => console.log('db has connected'));
+});
 
 app.use('/', notesRouter);
 app.listen(process.env.PORT || 3000, () => {
