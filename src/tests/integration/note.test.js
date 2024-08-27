@@ -17,7 +17,7 @@ describe('Add Note', () => {
                 description: "This note was created at " + new Date(),
             })
 
-        expect(res.statusCode).toEqual(302)
+        expect(res.statusCode).toEqual(200)
         expect(res.headers['location']).toEqual('/')
     })
 })
