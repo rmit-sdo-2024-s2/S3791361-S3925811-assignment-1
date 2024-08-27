@@ -8,8 +8,7 @@
     "test-lint": "eslint .",
     "test-unit": "jest --ci tests/unit --coverage --forceExit",
     "test-integration": "jest --ci tests/integration --coverage --forceExit",
-    "test-e2e": "npx playwright test",
-	"test-coverage": "jest --coverage"
+    "test-e2e": "npx playwright test"
   },
   "keywords": [],
   "author": "",
@@ -30,12 +29,5 @@
     "jest-junit": "^13.0.0",
     "mockingoose": "^2.15.2",
     "supertest": "^6.2.2"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ]
   }
 }
