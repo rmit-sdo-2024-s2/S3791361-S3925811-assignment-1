@@ -59,6 +59,9 @@ jobs:
       run: npm clean-install
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Starting the server
+      working-directory: ./src
+      run: npm start &
     - name: Run E2E tests
       run: npm run test-e2e --prefix src
     - name: Uploads E2E report
@@ -66,3 +69,5 @@ jobs:
       with:
          name: e2e-test-${{ github.sha }}
          path: src/reports/e2e
+    - name: Stoping the server
+      run: kill $(lsof -t -i:3000)
