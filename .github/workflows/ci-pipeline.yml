@@ -57,6 +57,8 @@ jobs:
     - name: Installs dependencies
       working-directory: ./src
       run: npm clean-install
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
     - name: Run E2E tests
       run: npm run test-e2e --prefix src
     - name: Uploads E2E report
