@@ -28,7 +28,7 @@ test('test', async ({ page }) => {
   // Click text=Delete
  //await page.locator('text=Delete').first();
   const noteCard = await page.locator('.card').filter({ hasText: 'E2E Test' });
-  await noteCard.locator('button:has-text("Delete")').click();
+  await noteCard.locator('form button.btn-danger').click();
   await expect(page).toHaveURL('http://localhost:3000/');
 
 });
