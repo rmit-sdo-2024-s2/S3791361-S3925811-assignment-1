@@ -1,0 +1,16 @@
+Analysis of the problem
+
+Alpine Inc. has been facing significant challenges because of their reliance on a manual deployment process. 
+This approach has led to multiple missed releases, increased bugs within production, and a strain on both customer support and the development teams morale. 
+The manual process is heavily dependent on one developer which is unsustainable. This manual process has also led to a critical release being missed for one of their largest clients. 
+If not addressed these issues could lead to substantial financial loses. 
+
+
+Explanation and justification of the solution
+
+Using the CI pipeline automates the entire process from code commit to deployment. 
+By using the CI pipeline Alpine Inc will avoid having the current issues its facing. 
+The CI pipeline will ensure that code changes are automatically tested, validated, and deployed. 
+The pipeline has multiple stages which collectively reduce the risk of human error and improve reliability of their releases. 
+The stages include linting, unit testing, code coverage and end to end testing. 
+In automating this process instead of their current manual process will ensure that only thoroughly tested and validated code will reach production, which will greatly improve the overall development workflow.
