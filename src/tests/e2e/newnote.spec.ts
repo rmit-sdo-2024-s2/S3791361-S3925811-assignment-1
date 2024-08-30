@@ -26,8 +26,9 @@ test('test', async ({ page }) => {
   await expect(page).toHaveURL('http://localhost:3000/');
 
   // Click text=Delete
- //await page.locator('text=Delete').click();
-  await page.locator('.note-container:has-text("E2E Test") >> text=Delete').click();
+ //await page.locator('text=Delete').first();
+  const note = page.locator('text=E2E Test');
+  await note.locatior('text=Delete').click();
   await expect(page).toHaveURL('http://localhost:3000/');
 
 });
