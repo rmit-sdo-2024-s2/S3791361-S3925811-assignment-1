@@ -27,8 +27,8 @@ test('test', async ({ page }) => {
 
   // Click text=Delete
  //await page.locator('text=Delete').first();
-  const note = page.locator('text=E2E Test');
-  await note.locatior('text=Delete').click();
+  const noteCard = await page.locator('text=E2E Test').locator('xpath=ancestor::div[contains@class, "card-body")]');
+  await noteCard.locatior('text=Delete').click();
   await expect(page).toHaveURL('http://localhost:3000/');
 
 });
