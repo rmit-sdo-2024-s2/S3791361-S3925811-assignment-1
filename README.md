@@ -4,10 +4,10 @@
 **Student ID/IDs:** s3791361, s3925811
 
 ### Introduction
-This README provides an overview of the Continuous Integration (CI) pipeline setup for the Alpine Inc Notes Application
+This README provides an overview of the Continuous Integration (CI) pipeline setup for the Alpine Inc. Notes Application
 
 ### Alpine Inc CI Pipeline
-This repository contains the CI pipeline setup for the Alpine Inc Notes Application. The application is built using Node.js, Express, and MongoDB. This CI pipeline will allow Alpine to automate the build, tests, and deployment processes>
+This repository contains the CI pipeline setup for the Alpine Inc Notes Application. The application is built using Node.js, Express, and MongoDB. This CI pipeline will allow Alpine to automate the build, tests, and deployment processes which will allow for future releases to be bug-free. The CI will allow Alpine Inc. to deploy its changes reliably.
 ### Prerequisites
 Please ensure that before running this CI pipeline, the following is installed on your computer/system:
 - Node.js
@@ -15,15 +15,15 @@ Please ensure that before running this CI pipeline, the following is installed o
 - Git
 
 ### Problem Alpine is Facing
-Alpine Inc. has been facing several challenges due to the lack of an automated deployment process. These challenges include missed releases, production bugs, and reduced team morale. The introduction of a CI pipeline addresses these iss>
+Alpine Inc. has faced several challenges due to the lack of an automated deployment process. These challenges include missed releases, production bugs, and reduced team morale. Introducing a CI pipeline addresses these issues by automating key development processes. 
 ### CI Pipeline Overview
-The CI pipeline will trigger automatically when any push or pull requests are made on any branch. The pipeline has multiple stages, all of which play a different role in ensuring bug free code.
+The CI pipeline will trigger automatically when any push or pull requests are made on any branch. The pipeline has multiple stages, all of which play a different role in ensuring bug-free code.
 
 - **Linting:** Will ensure code quality by identifying and flagging issues early in the development process.
 - **Unit testing:** Will allow for individual components to be tested and ensure they work as expected without any bugs.
 - **Code Coverage:** Will ensure that the codebase is adequately tested.
 - **Artifact Generation:** Produces deployable builds that can be consistently deployed to various environments.
-- **End-to-end testing:** Will simulate real world user interactions to validate the applications functionality from start to finish.
+- **End-to-end testing:** Will simulate real-world user interactions to validate the functionality of the application from start to finish.
 
 ### How to Run the CI Pipeline
 The CI pipeline will automatically run on GitHub actions upon the following:
